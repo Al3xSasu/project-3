@@ -1,0 +1,37 @@
+# Global constants
+CLASS_A_COST = 20.00
+CLASS_B_COST = 15.00
+CLASS_C_COST = 10.00
+
+def showIncome(class_a_tickets, class_b_tickets, class_c_tickets):
+    """
+    Calculate and display the income generated from ticket sales.
+    
+    Arguments:
+    - class_a_tickets: Number of Class A tickets sold.
+    - class_b_tickets: Number of Class B tickets sold.
+    - class_c_tickets: Number of Class C tickets sold.
+    """
+    # Calculate income from each class
+    income_a = class_a_tickets * CLASS_A_COST
+    income_b = class_b_tickets * CLASS_B_COST
+    income_c = class_c_tickets * CLASS_C_COST
+    
+    # Total income
+    total_income = income_a + income_b + income_c
+    
+    # Displaying results
+    print(f"Total income from ticket sales: ${total_income:.2f}")
+
+def main():
+    # Getting user input for tickets sold
+    class_a_tickets = int(input("Enter the number of Class A tickets sold: "))
+    class_b_tickets = int(input("Enter the number of Class B tickets sold: "))
+    class_c_tickets = int(input("Enter the number of Class C tickets sold: "))
+    
+    # Call the function to show the income
+    showIncome(class_a_tickets, class_b_tickets, class_c_tickets)
+
+# Running the main function
+if __name__ == "__main__":
+    main()
